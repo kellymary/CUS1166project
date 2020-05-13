@@ -2,12 +2,13 @@
  *
  * @author Mary Kelly
  */
+
 import java.sql.*;
 
 
 public class DBConnector {
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-    static final String DB_URL = "jdbc:mysql://localhost:3306/MagicDeckbuilder";
+    static final String DB_URL = "jdbc:mysql://localhost:3306/deck_builder";
 
     static final String USER = "root";
     static final String PASS = "password";
@@ -31,7 +32,7 @@ public class DBConnector {
       System.out.println("Creating database...");
       stmt = conn.createStatement();
       
-      String sql = "CREATE DATABASE STUDENTS";
+      String sql = "CREATE DATABASE deck_builder";
       stmt.executeUpdate(sql);
       System.out.println("Database created successfully...");
    }catch(SQLException se){
